@@ -13,7 +13,7 @@ GRANT ALL
 ON ALL SEQUENCES IN SCHEMA public
 TO comics_tracker_owner;
 
-CREATE USER final_capstone_appuser
+CREATE USER comics_tracker_appuser
 WITH PASSWORD 'comicstracker';
 
 GRANT SELECT, INSERT, UPDATE, DELETE
