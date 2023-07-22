@@ -12,17 +12,17 @@ public class TestController {
 
     @PreAuthorize("hasRole('ROLE_USER')")
     @GetMapping(path="/test")
-    public void testSomeStuff() {
-        System.out.println("BvS is the greatest comic book movie of all-time.");
+    public String testSomeStuff() {
+        return "BvS is the greatest comic book movie of all-time.";
     }
 
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     @GetMapping(path="/test-for-admins")
-    public void testSomeMoreStuff() {
+    public String testSomeMoreStuff() {
         try {
-            System.out.println("I am an admin.");
+            return "I am an admin.";
         } catch (Exception e){
-            System.out.println("You are not an admin so this API call is not for you.");
+            return "You are not an admin so this API call is not for you.";
         }
     }
 }
